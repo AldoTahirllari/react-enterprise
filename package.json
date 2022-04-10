@@ -1,0 +1,63 @@
+{
+  "name": "front-end",
+  "private": true,
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "craco": "^0.0.3",
+    "customize-cra": "^1.0.0",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "path": "^0.12.7",
+    "react-scripts": "^5.0.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**",
+      "apps"
+    ]
+  },
+  "scripts": {
+    "start": "scripty",
+    "generate": "scripty",
+    "start:customer-portal": "scripty",
+    "start:admin-portal": "scripty",
+    "build:customer-portal": "scripty",
+    "build:admin-portal": "scripty",
+    "build:storybook": "scripty",
+    "build": "scripty",
+    "storybook": "scripty",
+    "rebuild": "scripty",
+    "clean": "scripty",
+    "lint": "scripty",
+    "lint:fix": "scripty",
+    "prettify": "scripty",
+    "test:deprecated": "scripty",
+    "test": "node --expose-gc ./node_modules/.bin/jest --runInBand --logHeapUsage",
+    "test:watch": "npm test -- --watchAll",
+    "test:coverage": "npm test -- --coverage",
+    "commit": "cz",
+    "allow-scripts": "chmod -R +x scripts && chmod -R +x cleaner.sh"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "dependencies": {
+    "commitizen": "^4.2.4",
+    "react-app-rewired": "^2.2.1",
+    "scripty": "^2.0.0"
+  }
+}
