@@ -2,7 +2,6 @@
   "name": "front-end",
   "private": true,
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.9",
     "craco": "^0.0.3",
     "customize-cra": "^1.0.0",
     "husky": "^7.0.4",
@@ -13,7 +12,7 @@
   "workspaces": {
     "packages": [
       "packages/**",
-      "apps"
+      "apps/*"
     ]
   },
   "scripts": {
