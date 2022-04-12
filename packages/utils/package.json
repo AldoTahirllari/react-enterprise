@@ -1,0 +1,21 @@
+{
+  "name": "@react-enterprise/utils",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watchAll",
+    "test:coverage": "npm test -- --watchAll=false --coverage",
+    "test:global": "npm test --watchAll=false",
+    "lint": "scripty",
+    "lint:fix": "scripty",
+    "prettify": "scripty"
+  },
+  "scripty": {
+    "path": "../../scripts/packages"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

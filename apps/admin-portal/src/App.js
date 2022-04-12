@@ -1,8 +1,12 @@
 import logo from "./logo.svg";
 import { Button } from "@react-enterprise/components";
+import { useDisclosure, toCamelCase } from "@react-enterprise/utils";
 import "./App.css";
 
 function App() {
+  const { isOpen } = useDisclosure();
+  console.log(isOpen, "Open toggle");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {toCamelCase("une jam aldo")}
         </a>
       </header>
     </div>
